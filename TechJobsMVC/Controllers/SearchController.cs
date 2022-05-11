@@ -24,6 +24,7 @@ namespace TechJobsMVC.Controllers
         {
             ViewBag.jobs = searchTerm == null ? JobData.FindAll() : JobData.FindByColumnAndValue(searchType, searchTerm);
             ViewBag.columns = ListController.ColumnChoices;
+            ViewBag.choice = searchType;
             return View("Index");
         }
     }
